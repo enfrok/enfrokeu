@@ -1,45 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EnfrokOS</title>
-  <style>
-    :root {
-      --bg: #888;
-      --screen-dark: rgba(0, 0, 0, 0.9);
-      --font: -apple-system, BlinkMacSystemFont, 'San Francisco', sans-serif;
-      --primary: #0078d7;
-      --white: #fff;
-    }
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/app-icons/finder/32.png" />
+		<meta name="description" content="MacOS Desktop experience for Web" />
+		<title>EnfrokOS</title>
+		<link rel="apple-touch-icon" href="/app-icons/finder/192.png" sizes="192x192" />
+		<meta name="theme-color" content="#ffffff" />
+		<meta property="og:title" content="macOS in Svelte" />
+		<meta property="og:description" content="A painting of macOS Ventura in HTML, CSS and JS" />
+		<meta property="og:image" content="https://macos-web.app/cover-image.png" />
+		<meta property="og:url" content="https://macos-web.app" />
+		<meta name="twitter:card" content="summary_large_image" />
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: var(--font);
-    }
+		<link rel="prefetch" href="/sounds/mac-startup-sound.mp3" />
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.ts"></script>
+	</body>
 
-    html, body {
-      height: 100%;
-      background: var(--bg);
-    }
-
-    .screen {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--screen-dark);
-      color: white;
-      text-align: center;
-      transition: opacity 0.6s ease;
-      opacity: 1;
-      z-index: 10;
-    }
+	<script type="module">
+		(function (c, l, a, r, i, t, y) {
+			c[a] =
+				c[a] ||
+				function () {
+					(c[a].q = c[a].q || []).push(arguments);
+				};
+			t = l.createElement(r);
+			t.async = 1;
+			t.src = 'https://www.clarity.ms/tag/' + i;
+			y = l.getElementsByTagName(r)[0];
+			y.parentNode.insertBefore(t, y);
+		})(window, document, 'clarity', 'script', 'a95kitlcti');
+	</script>
+</html>
 
     .hidden {
       opacity: 0;
