@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EnfrokEU</title>
+  <title>EnfrokOS</title>
   <style>
     :root {
       --bg: #888;
@@ -112,8 +112,8 @@
 <body>
   <!-- Setup screen -->
   <div class="screen" id="startup">
-    <h1>EnfrokEU Setup</h1>
-    <p>Please enter your name and password to start.</p>
+    <h1>EnfrokOS Setup</h1>
+    <p>Please enter your name and password to begin setup.</p>
     <input type="text" id="name" placeholder="Enter your name">
     <input type="password" id="password" placeholder="Create a password">
     <div class="error" id="setup-error"></div>
@@ -122,9 +122,9 @@
 
   <!-- Conditions screen -->
   <div class="screen hidden" id="conditions">
-    <h2>Conditions in EnfrokEU</h2>
+    <h2>Conditions in EnfrokOS</h2>
     <ul style="text-align:left; max-width: 400px">
-      <li>• Minimising on EnfrokEU is currently not available.</li>
+      <li>• Minimising on EnfrokOS is currently not available.</li>
       <li>• There are currently five apps: Browser, Settings, Calculator, Notepad, and Enfrokian Intelligence.</li>
       <li>• Settings app is incomplete and would be functioning soon.</li>
       <li>• Shifting apps from one place to another is not available yet.</li>
@@ -137,7 +137,7 @@
   <!-- Login screen -->
   <div class="screen hidden" id="login">
     <h2 id="login-user">Welcome</h2>
-    <p>Please enter your password to start EnfrokEU.</p>
+    <p>Please enter your password to continue.</p>
     <input type="password" id="login-input" placeholder="Enter password">
     <div class="error" id="login-error"></div>
     <button onclick="login()">Login</button>
@@ -170,7 +170,7 @@
     </div>
 
     <div class="window" id="calc">
-      <div class="window-header">Calculator - Solve Math Problems</div>
+      <div class="window-header">Calculator</div>
       <div class="window-body">
         <input type="text" id="calc-display" readonly style="width:100%; font-size:1.2rem;">
         <div style="margin-top: 10px;">
@@ -245,7 +245,7 @@
         document.getElementById("login").classList.add("hidden");
         document.getElementById("desktop").classList.remove("hidden");
       } else {
-        error.textContent = "The password which was entered is wrong.";
+        error.textContent = "Wrong password.";
       }
     }
 
@@ -270,7 +270,7 @@
         iframe.src = input;
         msg.textContent = "";
       } else {
-        msg.textContent = "Use https:// - Only Wikipedia supported...";
+        msg.textContent = "Only Wikipedia supported. Use https://";
       }
     }
 
@@ -289,7 +289,7 @@
     }
 
     function saveNote() {
-      alert("Note saved!");
+      alert("Note saved! (but will be lost after refresh)");
     }
 
     function sendToAI() {
